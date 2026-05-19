@@ -1,0 +1,33 @@
+{
+  "name": "sales-order-extension",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "dependencies": {
+    "@cap-js/sqlite": "^2",
+    "@sap/cds": "^9",
+    "@sap/xssec": "^4.13.0",
+    "uuid": "^14.0.0"
+  },
+  "cds": {
+    "requires": {
+      "auth": {
+        "kind": "mocked"
+      },
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": "db.sqlite"
+        }
+      },
+      "API_SALES_ORDER": {
+        "kind": "rest",
+        "credentials": {
+          "url": "https://dummyjson.com"
+        }
+      }
+    }
+  }
+}

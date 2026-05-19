@@ -1,0 +1,7 @@
+applications:
+  - name: sales-order-extension
+    memory: 256M
+    disk_quota: 512M
+    random-route: true
+    buildpacks:
+      - nodejs_buildpack
